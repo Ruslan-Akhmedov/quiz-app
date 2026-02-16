@@ -1,6 +1,7 @@
 import React from "react";
 import * as styles from "./index.css";
 import quizImage from "../assets/quiz.png";
+import { Link } from "react-router-dom";
 
 export const MainPage = () => {
   return (
@@ -16,7 +17,9 @@ export const MainPage = () => {
           <img src={quizImage} className={styles.image}></img>
         </div>
         <div className={styles.buttonWrapper}>
-          <button className={styles.buttonStart}>Начать квиз</button>
+          <Link to="/question">
+            <button className={styles.buttonStart}>Начать квиз</button>
+          </Link>
           <div className={styles.buttonContainer}>
             <button className={styles.buttonMyResults}>Мои результаты</button>
             <button className={styles.buttonGeneralResults}>
